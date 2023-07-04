@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93C8BCF0-CC92-419F-9EAC-4F1E73B1C630}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TGuilit</RootNamespace>
+    <AssemblyName>TGuilit</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fox.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GameOverlay, Version=4.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GameOverlay.Net.4.3.1\lib\net48\GameOverlay.dll</HintPath>
+    </Reference>
+    <Reference Include="Memory, Version=1.2.24.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Memory.dll.x86.1.2.24\lib\netstandard2.0\Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct2D1.4.2.0\lib\net45\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DXGI.4.2.0\lib\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="All-Form\AimCustomForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All-Form\AimCustomForm.Designer.cs">
+      <DependentUpon>AimCustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All-Form\MiscCustomForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All-Form\MiscCustomForm.Designer.cs">
+      <DependentUpon>MiscCustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All-Form\SettingCustomForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All-Form\SettingCustomForm.Designer.cs">
+      <DependentUpon>SettingCustomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All-Form\MainF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All-Form\.Designer.cs">
+      <DependentUpon>MainF.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entity.cs" />
+    <Compile Include="Offsets.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="All-Form\VisualCustomForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All-Form\VisualCustomForm.Designer.cs">
+      <DependentUpon>VisualCustomForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="All-Form\AimCustomForm.resx">
+      <DependentUpon>AimCustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All-Form\MiscCustomForm.resx">
+      <DependentUpon>MiscCustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All-Form\SettingCustomForm.resx">
+      <DependentUpon>SettingCustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All-Form\MainF.resx">
+      <DependentUpon>MainF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="All-Form\VisualCustomForm.resx">
+      <DependentUpon>VisualCustomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting icon 25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngaaa.com-448848 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning-01 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-aim-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fox.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
